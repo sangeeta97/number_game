@@ -12,7 +12,7 @@ import random
 
 games= ''
 while games== '':
-    games= int(input('please choose a number:'))
+    games= int(input('please choose number of games:'))
     
     
     
@@ -24,17 +24,17 @@ for game in range(games):
     real = random.randint(1, 26)
     
     while real != pick:
-        pick= int(input('pick a number'))
+        pick= int(input('pick a number between 1 to 25'))
         attempts +=1
         
         if real != pick:
             if real > pick:
-                print('high')
+                print('number is lower')
             else:
-                print('low')
+                print('number is higher')
                 
         else:
-            print('lucky in %s' %attempts)
+            print('lucky in %s guesses' %attempts)
         
 
 
